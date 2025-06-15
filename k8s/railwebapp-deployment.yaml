@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: budgy-app
+  labels:
+    app: budgy-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: budgy-app
+  template:
+    metadata:
+      labels:
+        app: budgy-app
+    spec:
+      containers:
+        - name: budgy-app
+          image: sachin857/assesment:v1
+          command: ["/bin/bash", "-c", "/code/entrypoint.sh"]
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DATABASE_HOST
+              value: "postgres"
+            - name: DATABASE_USERNAME
+              value: "marvels"
+            - name: DATABASE_PASSWORD
+              value: "rails"
+            - name: RAILS_ENV
+              value: "development"

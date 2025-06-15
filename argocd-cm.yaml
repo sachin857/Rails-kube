@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+data:
+  # Example: Add your private Git repo credentials here or manage via secrets
+  repositories: |
+    - url: https://github.com/sachin857/assesmentp.git
+      usernameSecret:
+        name: repo-creds
+        key: username
+      passwordSecret:
+        name: repo-creds
+        key: password
+  # Add other ArgoCD configs here as needed
