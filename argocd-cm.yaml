@@ -3,6 +3,8 @@ kind: ConfigMap
 metadata:
   name: argocd-cm
   namespace: argocd
+  labels:
+    app.kubernetes.io/part-of: argocd
 data:
   # Example: Add your private Git repo credentials here or manage via secrets
   repositories: |
