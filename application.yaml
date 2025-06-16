@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/sachin857/assesmentp.git'  # Replace with your repo URL
+    targetRevision: master  # Branch or tag
+    path: k8s  # Path inside repo where your Kubernetes manifests live
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: dev  # Namespace to deploy your app
+  syncPolicy:
+    automated:
+      prune: true      # Delete resources removed from Git
+      selfHeal: true   # Revert manual changes in cluster
+    syncOptions:
+      - CreateNamespace=true  # Auto-create namespace if missing
