@@ -35,7 +35,7 @@ Thank you [@evans22j](https://github.com/evans22j) for open-sourcing this awesom
 
 
 ### 1. Install minikube
-If minikube is not installed, goto the provided link and follow till **Step 5. Start minikube**:  
+If minikube is not installed, goto the provided link and follow the article till it's **Step 5. Start minikube**:  
 ```bash
 https://phoenixnap.com/kb/install-minikube-on-ubuntu
 ```
@@ -52,7 +52,7 @@ git clone https://github.com/sachin857/Rails-kube.git && cd Rails-kube
 -- Note!
 - For your K8s environment you can refer this article **[ https://kubernetes.github.io/ingress-nginx/deploy/ ]** . If you have any better source to setup I am always open for suggestion. 
 
-- Ingress is basically one point of contact for all the services of your application.
+- Ingress is basically one point of contact for all the services of your application. It gives one single endpoint to connect rather than exposing multiple endpoints of your cluster.
 
 
 ```bash
@@ -116,9 +116,18 @@ https://phoenixnap.com/kb/install-minikube-on-ubuntu
 
 ## 🚀 Deploying CI/CD pipeline
 
-
+- We have implemented Tekton tool for CI and ArgoCD for CD. There's a change in plan. I am working on implementing Jenkins for CI part which will be for docker image build. And ArgoCD will be on hold. It is working but I need to perform sme testing. Codes are available 
+and I will share the steps to implement later on.
 
 ---
+
+### Known issue:
+
+- Post deployment of container takes time due to the build process of artifacts during runtime. Increase server up time by ~5 min.
+- Secret manager need to be implemented for managing creds.
+
+---
+
 
 ## 📬 Connect With Me
 
