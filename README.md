@@ -30,8 +30,8 @@ Thank you [@evans22j](https://github.com/evans22j) for open-sourcing this awesom
 
 ## ☸️ Deploying with minikube K8s
 
-# Note!
-```bash
+- Note!
+```
 minikube is a tool to create a Single node K8s cluster for your pesonal play. If you already have a local K8s environement setup you can go into your K8s environment & skip to **Step 2. Clone Repository**. And yes ofc, docker is required too.
 ``` 
 
