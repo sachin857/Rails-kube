@@ -31,9 +31,8 @@ Thank you [@evans22j](https://github.com/evans22j) for open-sourcing this awesom
 ## ☸️ Deploying with minikube K8s
 
 - Note!
-```
 minikube is a tool to create a Single node K8s cluster for your pesonal play. If you already have a local K8s environement setup you can go into your K8s environment & skip to **Step 2. Clone Repository**. And yes ofc, docker is required too.
-``` 
+ 
 
 ### 1. Install minikube
 If minikube is not installed, goto the provided link and follow till **Step 5. Start minikube**:  
@@ -50,12 +49,11 @@ git clone https://github.com/sachin857/Rails-kube.git && cd Rails-kube
 
 
 ### 3. Enable ingress [For minikube]
-# Note!
-```bash
-- For your K8s environment you can refer this article **[ https://kubernetes.github.io/ingress-nginx/deploy/ ]** . If you have any better source to setup I am always open for suggestion. 
+- Note!
+For your K8s environment you can refer this article **[ https://kubernetes.github.io/ingress-nginx/deploy/ ]** . If you have any better source to setup I am always open for suggestion. 
 
-- Ingress is basically one point of contact for all the services of your application.
-```
+Ingress is basically one point of contact for all the services of your application.
+
 
 ```bash
 minikube addons enable ingress
@@ -96,11 +94,10 @@ minikube ip
 
 
 ### To check if application is running:
-# Note!
-```bash 
+- Note!
 The docker image is not well optimize at this moment. Issue is it is building artifacts post deployment which should not happen. I will work on it.
 For now wait for 4-5 minute and then run below command into the browser.
-```
+
 
 ```bash
 http://budgy.local
