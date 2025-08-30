@@ -49,10 +49,10 @@ git clone https://github.com/sachin857/Rails-kube.git && cd Rails-kube
 
 
 ### 3. Enable ingress [For minikube]
-- Note!
-For your K8s environment you can refer this article **[ https://kubernetes.github.io/ingress-nginx/deploy/ ]** . If you have any better source to setup I am always open for suggestion. 
+-- Note!
+- For your K8s environment you can refer this article **[ https://kubernetes.github.io/ingress-nginx/deploy/ ]** . If you have any better source to setup I am always open for suggestion. 
 
-Ingress is basically one point of contact for all the services of your application.
+- Ingress is basically one point of contact for all the services of your application.
 
 
 ```bash
@@ -89,11 +89,10 @@ minikube ip
 
 
 ### To check if application is running:
-- Note!
----
-The docker image is not well optimize at this moment. Issue is it is building artifacts post deployment which should not happen. I will work on it.
+-- Note!
+- The docker image is not well optimize at this moment. Issue is it is building artifacts post deployment which should not happen. I will work on it.
 For now wait for 4-5 minute and then run below command into the browser.
----
+
 
 ```bash
 http://budgy.local
