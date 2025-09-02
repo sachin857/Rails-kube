@@ -128,6 +128,13 @@ and I will share the steps to implement later on.
 
 ---
 
+## 🐳  Deploying on Docker
+
+For Docker deployment, use the dedicated repo:
+
+👉 [@sachin857/Rails-docker](https://github.com/sachin857/Rails-docker)
+
+---
 
 ## 📬 Connect With Me
 
